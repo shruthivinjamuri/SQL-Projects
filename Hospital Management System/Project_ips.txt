@@ -1,0 +1,104 @@
+Units - Pathology, Emergency, Dental,
+Obstetrics and Gynecology, Cardiolog, Gastroenterology, ICUs(Intensive Care Unit), Ear
+nose and throat (ENT), Orthopaedic, Neurology, Cardiology, Diagnostic imaging
+
+Patient -> card -> doctor -> medicine or admit -> private or general room -> before admission(clearing bills) -> treatment -> paperwork
+
+Doctors -> regular doctors and callon doctors
+
+Functionalities: Patient(outdoor patients, patients admitted in the hospital, the medical records of the patients by the doctors, the patients who have
+been operated and the patients who are already released from the hospital),departments, rooms,billing and doctors.
+
+Tables:
+Ptnt_Enctr -
+Patient ID -> patient’s name
+Patient ID -> patient’s address
+room number -> room type
+Encounter ID
+Patient ID
+department ID
+Doctor ID
+Enctr_Date
+-------------------------------------------------
+Test -
+Test ID
+Test Name
+Test rate
+Encounter ID
+Patient ID
+Doctor ID
+
+-----------------------------------------------------
+Room -
+room number
+room type
+
+----------------------------------------------------------------
+
+Admission
+Patient ID
+SSN
+Patient's name
+Patient's address
+DOB
+E-mail
+Phone Number
+Insurance type 
+
+-------------------------------------------------------------
+Outdoor–Patient
+Encounter ID
+patient ID
+Doctor_id
+
+
+-------------------------------------------------------------
+Indoor Patient -
+Encounter ID
+Patient ID
+admission date
+release date
+doctor ID
+treatment details
+room number
+
+-----------------------------------------------------------
+Staff
+Staff ID
+Staff name
+designation
+address 
+qualification
+cell no
+e-mail
+--------------------------------------------------------------
+Doctor -
+Doctor ID
+Staff ID
+Encounter ID
+department ID
+------------------------------------------------------------------
+Billing - 
+Billing ID 
+Encounter ID
+Bill Amt
+Bill Status
+----------------------------------------------------------------------
+Department - 
+Department ID
+Department name
+
+
+SQL Queries:
+1. Create the tables relevant to your approach of design. Be precise while defining the
+domains, primary keys and the foreign keys in each relation.
+2. Display the details of a patient named John Brown and also display the name of
+doctor(s) who diagnosed him and also his total bill amount.
+3. Display the total number of patients diagnosed by Kate Smith on January 1st
+2009.
+4. Display the year which has the maximum number of patients.
+5. Display the details of a patient and the supervising doctor who was admitted more
+than once during the year 2010.
+6. Display details of the department/units the doctors of which have billed the maximum
+amounts.
+
